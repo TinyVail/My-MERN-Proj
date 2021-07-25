@@ -12,6 +12,10 @@ const run = async () => {
     typeDefs: typeDefinitions,
     resolvers,
     context: authMiddleware,
+    formatError: (err) => {
+      console.log(err);
+      return err;
+    },
   });
 
   await server.start();
