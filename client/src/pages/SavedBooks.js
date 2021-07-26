@@ -8,13 +8,13 @@ import {
 } from "react-bootstrap";
 
 import { useQuery, useMutation } from "@apollo/react-hooks";
-import { QUERY_SELF } from "../utils/queries";
+import { QUERY_ME } from "../utils/queries";
 import { REMOVE_BOOK } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 
 const SavedBooks = () => {
-  const { loading, data } = useQuery(QUERY_SELF);
+  const { loading, data } = useQuery(QUERY_ME);
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   const userData = data?.me || {};

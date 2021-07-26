@@ -13,7 +13,7 @@ const run = async () => {
     resolvers,
     context: authMiddleware,
     formatError: (err) => {
-      console.log(err);
+      console.log(JSON.stringify(err));
       return err;
     },
   });

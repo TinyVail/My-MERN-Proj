@@ -31,7 +31,7 @@ const typeDefinitions = gql`
     removeBook(bookId: ID!): User
   }
   type Query {
-    self: User
+    me: User
   }
   type Auth {
     token: ID!
